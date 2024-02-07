@@ -12,6 +12,7 @@ func main() {
 
 	fmt.Println("This program will roll a set of dice 10.000 times.")
 	fmt.Println("You can set how many sides are on your dice, and how many dice are in the set.")
+	fmt.Println("You can even set custom values for the dice sides.")
 
 	fmt.Println("How many sides on your dice?")
 	fmt.Scanln(&diceSides)
