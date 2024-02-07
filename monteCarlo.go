@@ -44,7 +44,7 @@ func main() {
 
 	// create the slice storing the rolls
 	// To do: Update this for customDiceSides
-	monteCarlo := make([]int, (diceSides*diceRolls)+slices.Max(customDiceSides))
+	monteCarlo := make([]int, (slices.Max(customDiceSides)*diceRolls)+1)
 
 	// create a slice to store the rolls needed for the minimum target score
 	rollsNeeded := make([]int, diceRolls+slices.Max(customDiceSides))
