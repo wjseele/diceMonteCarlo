@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"slices"
 )
 
 func main() {
@@ -43,10 +44,10 @@ func main() {
 
 	// create the slice storing the rolls
 	// To do: Update this for customDiceSides
-	monteCarlo := make([]int, (diceSides*diceRolls)+1)
+	monteCarlo := make([]int, (diceSides*diceRolls)+slices.Max(customDiceSides))
 
 	// create a slice to store the rolls needed for the minimum target score
-	rollsNeeded := make([]int, diceRolls+1)
+	rollsNeeded := make([]int, diceRolls+slices.Max(customDiceSides))
 
 	// The Monte Carlo magic happens here
 	for i := 0; i < 10000; i++ {
