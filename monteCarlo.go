@@ -68,6 +68,9 @@ func main() {
 	for i, n := range rollsNeeded {
 		if i == 0 {
 			fmt.Println("In", n, "cases, the minimum score wasn't rolled.")
+			var percent int
+			percent = (10000 - n) / 100
+			fmt.Println("In other words, the chance to roll the minimum is", percent, "%")
 		}
 		if i != 0 && n != 0 {
 			fmt.Println("Amount of rolls required for", minimumScore, ":", i, "in", n, "cases.")
