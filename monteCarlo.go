@@ -23,14 +23,13 @@ func main() {
 	fmt.Println("Do you want to use custom values for your dice sides? (Y/n)")
 	fmt.Scanln(&customValues)
 
-	if customValues == "Y" {
+	if customValues == "Y" || customValues == "y" || customValues == "" {
 		fmt.Println("Please enter the values for each side one by one")
 		for i := 0; i < diceSides; i++ {
 			fmt.Println("Enter value for side", i+1)
 			fmt.Scanln(&customDiceSides[i])
 		}
-	}
-	if customValues == "n" {
+	} else {
 		for i := 0; i < diceSides; i++ {
 			customDiceSides[i] = i + 1
 		}
